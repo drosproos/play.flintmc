@@ -1,13 +1,9 @@
-name: FlintMC
 services:
   - name: minecraft
-    type: docker
-    ports:
-      - port: 25565
-        protocol: tcp
-        expose: true
-
+    type: service
+    port: 25565
   - name: panel
     type: static
-    buildCommand: ""
-    output: .
+    static:
+      root: .
+
