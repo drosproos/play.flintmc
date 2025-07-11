@@ -1,14 +1,20 @@
-FROM openjdk:17-alpine
+FROM alpine:latest
+
+# ✅ Install Java 17 and curl (required for PaperMC)
+RUN apk add --no-cache openjdk17 curl
+
+# ✅ Set working directory
 WORKDIR /server
 
-# Install curl
-RUN apk add --no-cache curl
+# ✅ Copy all Minecraft files into /server
+COPY server /server
 
-COPY server/start.sh /server/start.sh
-RUN chmod +x /server/start.sh
+# ✅ Give execute permission to start script
+RUN chmod +x start.sh
 
-COPY server/eula.txt /server/eula.txt
-COPY server/server.properties /server/server.properties
-COPY server/plugins /server/plugins
+# ✅ Expose the Minecraft port (25565)
+EXPOSE 25565
 
-CMD ["sh", "start.sh"]
+# ✅ Start the Minecraft server
+CMD ["sh", "./start.sh"]
+
