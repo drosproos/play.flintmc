@@ -2,40 +2,43 @@
 <html>
 <head>
   <title>FlintMC Control Panel</title>
+  <meta http-equiv="refresh" content="10">
   <style>
     body {
       background-color: #0b0b0f;
       color: #fff;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       text-align: center;
       padding-top: 60px;
+    }
+    .box {
+      background: #111;
+      padding: 25px;
+      margin: auto;
+      width: 360px;
+      border-radius: 14px;
+      box-shadow: 0 0 14px #f97316;
     }
     h1 {
       color: #f97316;
     }
-    .box {
-      background: #111;
-      padding: 20px;
-      margin: auto;
-      width: 320px;
-      border-radius: 12px;
-      box-shadow: 0 0 12px #f97316;
+    .info {
+      margin: 10px 0;
     }
     code {
-      background: #222;
-      padding: 2px 6px;
-      border-radius: 4px;
+      color: #16f992;
     }
   </style>
 </head>
 <body>
   <div class="box">
-    <h1>🔥 FlintMC Panel</h1>
-    <p><b>Status:</b> ✅ Online</p>
-    <p><b>IP:</b> <code>zeabur-minecraft-server.zeabur.app</code></p>
-    <p><b>Port:</b> 25565</p>
-    <p><b>Players:</b> 0/20</p>
-    <p><b>MOTD:</b> Welcome to FlintMC!</p>
+    <h1>🛠 FlintMC Panel</h1>
+    <div class="info"><b>Status:</b> ✅ Online</div>
+    <div class="info"><b>IP:</b> <code>play.flinmc.tk</code></div>
+    <div class="info"><b>Port:</b> <code>25565</code></div>
+    <div class="info"><b>Players:</b> 0/20</div>
+    <div class="info"><b>MOTD:</b> Welcome to FlintMC!</div>
+    <div class="info"><i>(Auto refresh every 10s)</i></div>
   </div>
 </body>
 </html>
